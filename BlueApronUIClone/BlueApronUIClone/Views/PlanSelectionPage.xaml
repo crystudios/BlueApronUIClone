@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="{Binding Title}"
+             x:Class="BlueApronUIClone.Views.PlanSelectionPage"
+             BackgroundColor="#eceef2">
+    <ContentPage.Content>
+        <StackLayout Spacing="3">
+            <StackLayout.Padding>
+                <OnPlatform x:TypeArguments="Thickness">
+                    <On Platform="iOS" Value="20,20,20,40" />
+                    <On Platform="Android" Value="20,20,20,20" />
+                </OnPlatform>
+            </StackLayout.Padding>   
+            <!-- Nav Bar Emu -->
+            <StackLayout Orientation="Horizontal" VerticalOptions="Fill" Padding="0,10,0,10"
+                         HeightRequest="50">
+                <Image WidthRequest="50" HeightRequest="50" VerticalOptions="Center"
+                       HorizontalOptions="Center" Source="chevron_left"/>
+                <Label Text="We plan to cook 4 times each week." HorizontalTextAlignment="Center"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="Center" FontAttributes="Bold" TextColor="#0f346c"
+                       FontSize="18"/>
+                <Image WidthRequest="25" HeightRequest="25" VerticalOptions="Center"
+                       HorizontalOptions="Center" />
+            </StackLayout>  
+            <!-- Image -->
+            
+            <Image Source="familyplan" HorizontalOptions="Fill" Margin="0,0,0,10"
+                   />
+            <!-- Options Row 1 -->
+            
+            <Grid RowSpacing="2" BackgroundColor="White" Padding="0,15,0,15">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="3*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions> 
+                
+                <!--First Card -->
+                <Image HeightRequest="25" WidthRequest="25" Grid.RowSpan="3"   
+                       VerticalOptions="Center" Grid.Row="0" Grid.Column="0"
+                             Source="checkbox_blank_circle_outline" 
+                             BackgroundColor="Transparent"/>
+                <Label Text="2 times" Grid.Row="0" Grid.Column="1"
+                       TextColor="#0f346c" FontAttributes="Bold" 
+                       HeightRequest="20" VerticalTextAlignment="End"/>
+                <Label Text="$8.99 a serving" Grid.Row="1" Grid.Column="1" 
+                       FontSize="14"/>
+                <Label Text="Free Shipping" Grid.Row="2" Grid.Column="1" 
+                       FontSize="14" TextColor="#e7581d" FontAttributes="Bold" 
+                       HeightRequest="25" VerticalTextAlignment="Start"/>
+                
+                <Image HeightRequest="25" WidthRequest="25" Grid.RowSpan="3"  
+                       VerticalOptions="Center" Grid.Row="0" Grid.Column="2" 
+                       Source="checkbox_blank_circle_outline" BackgroundColor="Transparent"/>
+                
+                <Label Text="3 times" Grid.Row="0" Grid.Column="3"
+                       TextColor="#0f346c" FontAttributes="Bold"
+                       HeightRequest="20" VerticalTextAlignment="End"/>
+                <Label Text="$7.99 a serving" Grid.Row="1" Grid.Column="3" 
+                       FontSize="14"/>
+                <Label Text="Free Shipping" Grid.Row="2" Grid.Column="3" 
+                       FontSize="14" TextColor="#e7581d" FontAttributes="Bold"
+                       HeightRequest="25" VerticalTextAlignment="Start"/>
+                
+                
+                <!-- Spacer -->
+                <Image BackgroundColor="#eceef2" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4"
+                       VerticalOptions="Fill" HeightRequest="2" />
+                
+                <!--Second Card -->
+                <Image HeightRequest="25" WidthRequest="25" Grid.RowSpan="3" 
+                       VerticalOptions="Center" Grid.Row="4" Grid.Column="0" 
+                       Source="checkbox_marked_circle" BackgroundColor="Transparent"/>
+                
+                <Label Text="4 times" Grid.Row="4" Grid.Column="1"
+                        TextColor="Green" FontAttributes="Bold"
+                       HeightRequest="35" VerticalTextAlignment="End"/>
+                <Label Text="$7.49 a serving" Grid.Row="5" Grid.Column="1" 
+                       FontSize="14"/>
+                <Label Text="Free Shipping" Grid.Row="6" Grid.Column="1" 
+                       FontSize="14" TextColor="#e7581d" FontAttributes="Bold"
+                       VerticalTextAlignment="Start"/>
+            </Grid>
+                
+            <!-- Payment Details Grid -->
+            <Grid VerticalOptions="StartAndExpand" RowSpacing="10" Margin="0,10,0,0"> 
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions> 
+                
+                <Label Text="Recurring Weekly Total" Grid.Row="0" Grid.Column="0"
+                       FontSize="14" FontAttributes="Bold"/>
+                <Label Text="$119.84" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="1"
+                       FontSize="14" FontAttributes="Bold"/>
+                <Label Text="Tax" Grid.Row="1" Grid.Column="0"
+                       FontSize="14" FontAttributes="Bold"/>
+                <Label Text="$0.00" HorizontalTextAlignment="End" Grid.Row="1" Grid.Column="1"
+                       FontSize="14" FontAttributes="Bold"/>
+                <Label Text="Shipping" Grid.Row="2" Grid.Column="0"
+                       FontSize="14" FontAttributes="Bold"/>
+                <Label Text="FREE" HorizontalTextAlignment="End" Grid.Row="2" Grid.Column="1"
+                       FontSize="14" FontAttributes="Bold"/>
+                <Label Text="First Week Total" Grid.Row="3" Grid.Column="0"
+                       FontSize="14" FontAttributes="Bold"/>
+                <Label Text="$119.84" HorizontalTextAlignment="End" Grid.Row="3" Grid.Column="1"
+                       FontSize="14" FontAttributes="Bold"/>
+            </Grid>
+            <!-- Continue Button -->
+            <Button BackgroundColor="#0f346c" HeightRequest="50"
+                    Text="Continue" TextColor="White" FontAttributes="Bold" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

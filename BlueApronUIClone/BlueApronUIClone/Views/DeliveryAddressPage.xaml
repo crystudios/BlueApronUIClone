@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="{Binding Title}"
+             x:Class="BlueApronUIClone.Views.DeliveryAddressPage"
+             BackgroundColor="#eceef2">
+    <ContentPage.Content>
+        <Grid RowSpacing="0">
+            <Grid.Padding>
+                <OnPlatform x:TypeArguments="Thickness">
+                    <On Platform="iOS" Value="20,20,20,40" />
+                    <On Platform="Android" Value="20,20,20,20" />
+                </OnPlatform>
+            </Grid.Padding>  
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <StackLayout Grid.ColumnSpan="2" Orientation="Horizontal" Grid.Row="0"
+                         Grid.Column="0" HeightRequest="60" Margin="0,0,0,10">
+                <Image WidthRequest="50" HeightRequest="50" VerticalOptions="Center"
+                       HorizontalOptions="Center" Source="chevron_left"/>
+                <Label Text="Where should we deliver?" HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="Center" FontAttributes="Bold" TextColor="#0f346c"
+                       FontSize="18"/>
+                <Image WidthRequest="25" HeightRequest="25" VerticalOptions="Center"
+                       HorizontalOptions="Center" />
+            </StackLayout>    
+            <!-- Row1 -->
+            <Label Text="First Name" Grid.Row="1" Grid.Column="0" FontAttributes="Bold" TextColor="#0f346c"
+                   FontSize="14"/>
+            <Label Text="Last Name" Grid.Row="1" Grid.Column="1" FontAttributes="Bold" TextColor="#0f346c"
+                   FontSize="14"/>
+            <!-- Row2 -->
+            <Entry Grid.Row="2" Grid.Column="0" Margin="0,0,0,15" 
+                   BackgroundColor="White" FontSize="14"/>
+            <Entry Grid.Row="2" Grid.Column="1" Margin="0,0,0,15" 
+                   BackgroundColor="White" FontSize="14"/>
+            <!-- Row3 -->
+            <Label Text="Address" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" 
+                   FontSize="14" FontAttributes="Bold" TextColor="#0f346c"/>
+            <!-- Row4 -->
+            <Entry Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"  FontSize="14"
+                   BackgroundColor="White" Margin="0,0,0,25" />
+            <!-- Row5 -->
+            <Label Text="Apt/Suite/Floor #" Grid.Row="5" Grid.Column="0" FontAttributes="Bold" TextColor="#0f346c"
+                   FontSize="14"/>
+            <Label Text="Zip" Grid.Row="5" Grid.Column="1" FontAttributes="Bold" TextColor="#0f346c"
+                   FontSize="14"/>
+            <!-- Row6 -->
+            <Entry Grid.Row="6" Grid.Column="0"  FontSize="14"
+                   BackgroundColor="White" Margin="0,0,0,15" />
+            <Entry Grid.Row="6" Grid.Column="1" Margin="0,0,0,15" 
+                   Text="27284" BackgroundColor="White" FontSize="14"/>
+            <!-- Row7 -->
+            <Label Text="City" Grid.Row="7" Grid.Column="0" FontAttributes="Bold" TextColor="#0f346c"
+                   FontSize="14"/>
+            <Label Text="State" Grid.Row="7" Grid.Column="1" FontAttributes="Bold" TextColor="#0f346c"
+                   FontSize="14"/>
+            <!-- Row8 -->
+            <Entry Grid.Row="8" Grid.Column="0" Margin="0,0,0,15" 
+                   Text="Kernersville" BackgroundColor="White" FontSize="14"/>
+            <Picker Grid.Row="8" Grid.Column="1" FontSize="14"
+                    Margin="0,0,0,15" SelectedIndex="33" BackgroundColor="White" >
+                <Picker.Items>
+                    <x:String>Alabama</x:String>
+                    <x:String>Alaska</x:String>
+                    <x:String>Arizona</x:String>
+                    <x:String>Arkansas</x:String>
+                    <x:String>California</x:String>
+                    <x:String>Colorado</x:String>
+                    <x:String>Connecticut</x:String>
+                    <x:String>Delaware</x:String>
+                    <x:String>District of Columbia</x:String>
+                    <x:String>Florida</x:String>
+                    <x:String>Georgia</x:String>
+                    <x:String>Hawaii</x:String>
+                    <x:String>Idaho</x:String>
+                    <x:String>Illinois</x:String>
+                    <x:String>Indiana</x:String>
+                    <x:String>Iowa</x:String>
+                    <x:String>Kansas</x:String>
+                    <x:String>Kentucky</x:String>
+                    <x:String>Louisiana</x:String>
+                    <x:String>Maine</x:String>
+                    <x:String>Maryland</x:String>
+                    <x:String>Massachusetts</x:String>
+                    <x:String>Michigan</x:String>
+                    <x:String>Minnesota</x:String>
+                    <x:String>Mississippi</x:String>
+                    <x:String>Missouri</x:String>
+                    <x:String>Montana</x:String>
+                    <x:String>Nebraska</x:String>
+                    <x:String>Nevada</x:String>
+                    <x:String>New Hampshire</x:String>
+                    <x:String>New Jersey</x:String>
+                    <x:String>New Mexico</x:String>
+                    <x:String>New York</x:String>
+                    <x:String>North Carolina</x:String>
+                    <x:String>North Dakota</x:String>
+                    <x:String>Ohio</x:String>
+                    <x:String>Oklahoma</x:String>
+                    <x:String>Oregon</x:String>
+                    <x:String>Pennsylvania</x:String>
+                    <x:String>Rhode Island</x:String>
+                    <x:String>South Carolina</x:String>
+                    <x:String>South Dakota</x:String>
+                    <x:String>Tennessee</x:String>
+                    <x:String>Texas</x:String>
+                    <x:String>Utah</x:String>
+                    <x:String>Vermont</x:String>
+                    <x:String>Virginia</x:String>
+                    <x:String>Washington</x:String>
+                    <x:String>West Virginia</x:String>
+                    <x:String>Wisconsin</x:String>
+                    <x:String>Wyoming</x:String>
+                </Picker.Items>
+            </Picker>
+            <!-- Entry Grid.Row="8" Grid.Column="1" HeightRequest="35" Margin="0,0,0,10" /> -->
+            
+            <!-- Row9 -->
+            <Label Text="Phone Number" Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2" FontAttributes="Bold" TextColor="#0f346c"
+                   FontSize="14"/>
+            <!-- Row10 -->
+            <Entry Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,0,15" 
+                   BackgroundColor="White" FontSize="14" />
+            <!-- Row11 -->
+            <Label Text="Special Instructions (optional)" Grid.Row="11" FontSize="14"
+                   Grid.Column="0" Grid.ColumnSpan="2" FontAttributes="Bold" TextColor="#0f346c"/>
+            <!-- Row12 -->
+            <Entry Grid.Row="12" Grid.Column="0" Grid.ColumnSpan="2" FontSize="14"
+                   Placeholder="e.g. Please leave with front office" BackgroundColor="White"
+                   VerticalOptions="StartAndExpand" Margin="0,0,0,15" />
+            <!-- Row13 -->
+            <Button BackgroundColor="#0f346c" Grid.Row="13" Grid.Column="0" Grid.ColumnSpan="2"
+                    Text="Continue" TextColor="White" FontAttributes="Bold"
+                    HeightRequest="50"/>
+        </Grid>
+    </ContentPage.Content>
+
+</ContentPage>

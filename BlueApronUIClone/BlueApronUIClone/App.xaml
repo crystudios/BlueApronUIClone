@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<prism:PrismApplication xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:prism="clr-namespace:Prism.DryIoc;assembly=Prism.DryIoc.Forms" x:Class="BlueApronUIClone.App">
+    <Application.Resources>
+        <!-- Application resource dictionary -->
+        
+        <!-- Color Pallete -->
+        <Color x:Key="colorPrimary">#0F346C</Color>
+        <Color x:Key="colorPrimaryDark">#00796B</Color>
+        <Color x:Key="colorPrimaryLight">#B2DFDB</Color>
+        <Color x:Key="colorAccent">#E7581D</Color>
+        <Color x:Key="colorBarTextIcons">#FFFFFF</Color>
+        <Color x:Key="colorPrimaryText">#0F346C</Color>
+        <Color x:Key="colorSecondaryText">#757575</Color>
+        <Color x:Key="colorDivider">#BDBDBD</Color>
+        <Color x:Key="colorInvalidEntryBg">#FBC5D0</Color>
+        <Color x:Key="colorInvalidText">Red</Color>
+        <Color x:Key="colorBackground">#ECEEF2</Color>
+        <Color x:Key="colorSemiTransparentBackground">#99ECEEF2</Color>
+        
+        <Style ApplyToDerivedTypes="true" TargetType="NavigationPage">
+            <Setter Property="BarBackgroundColor" Value="{StaticResource Key=colorBackground}"/>
+            <Setter Property="BarTextColor" Value="{StaticResource Key=colorPrimary}"/>
+        </Style>
+        
+        <Style TargetType="ContentPage">
+            <Setter Property="BackgroundColor" Value="{DynamicResource Key=colorBackground}" />
+        </Style>
+        <Style TargetType="TabbedPage">
+            <Setter Property="BackgroundColor" Value="{DynamicResource Key=colorBackground}" />
+        </Style>
+        
+        <Style x:Name="TranslucentPanel" TargetType="ContentView">
+            <Setter Property="BackgroundColor" Value="{DynamicResource Key=colorSemiTransparentBackground}" />
+        </Style>
+        
+    </Application.Resources>
+</prism:PrismApplication>

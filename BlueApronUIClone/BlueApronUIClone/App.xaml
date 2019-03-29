@@ -29,44 +29,44 @@
             <Setter Property="BackgroundColor" Value="{DynamicResource Key=colorBackground}" />
         </Style>
         
-        <Style x:Name="TranslucentPanel" TargetType="ContentView">
+        <Style x:Key="TranslucentPanel" TargetType="ContentView">
             <Setter Property="BackgroundColor" Value="{DynamicResource Key=colorSemiTransparentBackground}" />
         </Style>
         
-        <Style x:Name="TitleViewHeader" TargetType="Label">
+        <Style x:Key="titleViewHeader" TargetType="Label">
             <Setter Property="TextColor" Value="{DynamicResource Key=colorPrimary}" />
             <Setter Property="HorizontalTextAlignment" Value="Center" />
             <Setter Property="FontFamily" Value="CeraPro-Bold.otf#CeraPro-Bold" />
             <Setter Property="FontSize" Value="18" />
         </Style>
        
-        <!--<Style x:Name="PrimaryLabel" TargetType="Label">
+        <Style x:Key="primaryLabel" TargetType="Label">
             <Setter Property="TextColor" Value="{DynamicResource Key=colorPrimary}" />
             <Setter Property="HorizontalTextAlignment" Value="Start" />
             <Setter Property="FontFamily" Value="CeraPro-Bold.otf#CeraPro-Bold" />
             <Setter Property="FontSize" Value="14" />
         </Style>
         
-        <Style x:Name="SecondaryLabel" TargetType="Label">
+        <Style x:Key="secondaryLabel" TargetType="Label">
             <Setter Property="TextColor" Value="{DynamicResource Key=colorSecondaryText}" />
             <Setter Property="HorizontalTextAlignment" Value="Start" />
             <Setter Property="FontFamily" Value="CeraPro-Bold.otf#CeraPro-Bold" />
             <Setter Property="FontSize" Value="14" />
         </Style>
         
-        <Style x:Name="ListPrimaryLabel" TargetType="Label">
+        <Style x:Key="listPrimaryLabel" TargetType="Label">
             <Setter Property="TextColor" Value="{DynamicResource Key=colorPrimary}" />
             <Setter Property="HorizontalTextAlignment" Value="Start" />
             <Setter Property="FontFamily" Value="CeraPro-Bold.otf#CeraPro-Bold" />
             <Setter Property="FontSize" Value="14" />
         </Style>
         
-        <Style x:Name="ListSecondaryLabel" TargetType="Label">
+        <Style x:Key="listSecondaryLabel" TargetType="Label">
             <Setter Property="TextColor" Value="{DynamicResource Key=colorSecondaryText}" />
             <Setter Property="HorizontalTextAlignment" Value="Start" />
             <Setter Property="FontFamily" Value="CeraPro-Bold.otf#CeraPro-Bold" />
             <Setter Property="FontSize" Value="12" />
-        </Style>-->
+        </Style>
         
     </Application.Resources>
 </prism:PrismApplication>

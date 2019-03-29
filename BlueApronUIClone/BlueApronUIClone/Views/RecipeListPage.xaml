@@ -5,7 +5,7 @@
              x:Class="BlueApronUIClone.Views.RecipeListPage">
     
     <NavigationPage.TitleView >
-        <Label Text="{Binding Title}" Style="{DynamicResource Key=TitleViewHeader }"/>
+        <Label Text="{Binding Title}" Style="{DynamicResource Key=titleViewHeader }"/>
     </NavigationPage.TitleView>
     
     <ListView   x:Name="lstRecipes" ItemsSource="{Binding RecipeList}" 
@@ -17,9 +17,9 @@
                    <StackLayout Orientation="Horizontal" Padding="10,10,10,10">  
                         <Image   x:Name="imgRecipe"  Source="{Binding Picture}" WidthRequest="100" HeightRequest="100" />
                         <StackLayout Orientation="Vertical"> 
-                              <Label  x:Name="lblRecipeName" Text="{Binding RecipeName}" Font="Bold,13" TextColor="{StaticResource Key=colorPrimary}"  Margin="10,0,0,0"
+                              <Label  x:Name="lblRecipeName" Text="{Binding RecipeName}" Style="{StaticResource Key=listPrimaryLabel}"  Margin="10,0,0,0"
                                       HorizontalTextAlignment="Start"/>
-                              <Label  x:Name="lblRecipeDesc" Text="{Binding RecipeDesc}" FontSize="11" TextColor="{StaticResource Key=colorSecondaryText}" Margin="10,0,0,0"
+                              <Label  x:Name="lblRecipeDesc" Text="{Binding RecipeDesc}" Style="{StaticResource Key=listSecondaryLabel}" Margin="10,0,0,0"
                                       HorizontalTextAlignment="Start"/>
                         </StackLayout> 
                    </StackLayout>

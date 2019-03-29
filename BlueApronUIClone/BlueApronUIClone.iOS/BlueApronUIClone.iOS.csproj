@@ -181,6 +181,10 @@
     <BundleResource Include="Resources\Default.png" />
     <BundleResource Include="Resources\Default@2x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <BundleResource Include="Resources\Fonts\CeraPro-Bold.otf" />
+    <BundleResource Include="Resources\Fonts\CeraPro-Medium.otf" />
+    <BundleResource Include="Resources\Fonts\CeraPro-Regular.otf" />
+    <BundleResource Include="Resources\Fonts\Roboto-Regular.ttf" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -197,6 +201,9 @@
       <Project>{68328C1F-AF1D-458A-BFEB-6FC9F7340DC1}</Project>
       <Name>BlueApronUIClone</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Fonts\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

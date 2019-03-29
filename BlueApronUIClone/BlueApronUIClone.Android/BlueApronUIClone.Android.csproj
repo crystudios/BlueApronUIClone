@@ -77,6 +77,12 @@
     <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher.png" />
     <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\drawable\img1.png" />
+    <AndroidResource Include="Resources\drawable\img2.png" />
+    <AndroidResource Include="Resources\drawable\img3.png" />
+    <AndroidResource Include="Resources\drawable\img4.png" />
+    <AndroidResource Include="Resources\drawable\img5.png" />
+    <AndroidResource Include="Resources\drawable\img6.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
@@ -93,6 +99,16 @@
       <Project>{68328C1F-AF1D-458A-BFEB-6FC9F7340DC1}</Project>
       <Name>BlueApronUIClone</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\Fonts\" />
+    <Folder Include="Resources\drawable\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\CeraPro-Bold.otf" />
+    <AndroidAsset Include="Assets\CeraPro-Medium.otf" />
+    <AndroidAsset Include="Assets\CeraPro-Regular.otf" />
+    <AndroidAsset Include="Assets\Roboto-Regular.ttf" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

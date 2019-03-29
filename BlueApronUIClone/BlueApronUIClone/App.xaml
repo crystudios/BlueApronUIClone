@@ -33,5 +33,40 @@
             <Setter Property="BackgroundColor" Value="{DynamicResource Key=colorSemiTransparentBackground}" />
         </Style>
         
+        <Style x:Name="TitleViewHeader" TargetType="Label">
+            <Setter Property="TextColor" Value="{DynamicResource Key=colorPrimary}" />
+            <Setter Property="HorizontalTextAlignment" Value="Center" />
+            <Setter Property="FontFamily" Value="CeraPro-Bold.otf#CeraPro-Bold" />
+            <Setter Property="FontSize" Value="18" />
+        </Style>
+       
+        <!--<Style x:Name="PrimaryLabel" TargetType="Label">
+            <Setter Property="TextColor" Value="{DynamicResource Key=colorPrimary}" />
+            <Setter Property="HorizontalTextAlignment" Value="Start" />
+            <Setter Property="FontFamily" Value="CeraPro-Bold.otf#CeraPro-Bold" />
+            <Setter Property="FontSize" Value="14" />
+        </Style>
+        
+        <Style x:Name="SecondaryLabel" TargetType="Label">
+            <Setter Property="TextColor" Value="{DynamicResource Key=colorSecondaryText}" />
+            <Setter Property="HorizontalTextAlignment" Value="Start" />
+            <Setter Property="FontFamily" Value="CeraPro-Bold.otf#CeraPro-Bold" />
+            <Setter Property="FontSize" Value="14" />
+        </Style>
+        
+        <Style x:Name="ListPrimaryLabel" TargetType="Label">
+            <Setter Property="TextColor" Value="{DynamicResource Key=colorPrimary}" />
+            <Setter Property="HorizontalTextAlignment" Value="Start" />
+            <Setter Property="FontFamily" Value="CeraPro-Bold.otf#CeraPro-Bold" />
+            <Setter Property="FontSize" Value="14" />
+        </Style>
+        
+        <Style x:Name="ListSecondaryLabel" TargetType="Label">
+            <Setter Property="TextColor" Value="{DynamicResource Key=colorSecondaryText}" />
+            <Setter Property="HorizontalTextAlignment" Value="Start" />
+            <Setter Property="FontFamily" Value="CeraPro-Bold.otf#CeraPro-Bold" />
+            <Setter Property="FontSize" Value="12" />
+        </Style>-->
+        
     </Application.Resources>
 </prism:PrismApplication>

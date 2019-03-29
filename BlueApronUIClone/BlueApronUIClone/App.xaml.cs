@@ -23,13 +23,24 @@ namespace BlueApronUIClone
         {
             InitializeComponent();
 
-            await NavigationService.NavigateAsync("NavigationPage/MainPage");
+            await NavigationService.NavigateAsync("NavigationPage/RecipeListPage");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
+            containerRegistry.RegisterForNavigation<LearnMorePage, LearnMorePageViewModel>();
+            containerRegistry.RegisterForNavigation<OnTheMenuPage, OnTheMenuPageViewModel>();
+            containerRegistry.RegisterForNavigation<RecipeListPage, RecipeListPageViewModel>();
+            containerRegistry.RegisterForNavigation<RecipeDetailsPage, RecipeDetailsPageViewModel>();
+            containerRegistry.RegisterForNavigation<ProfilePage, ProfilePageViewModel>();
+            containerRegistry.RegisterForNavigation<LogInPage, LogInPageViewModel>();
+            containerRegistry.RegisterForNavigation<SignUpPage, SignUpPageViewModel>();
+            containerRegistry.RegisterForNavigation<DeliveryAddressPage, DeliveryAddressPageViewModel>();
+            containerRegistry.RegisterForNavigation<PlanSelectionPage, PlanSelectionPageViewModel>();
+            containerRegistry.RegisterForNavigation<PlanTypePage, PlanTypePageViewModel>();
+            containerRegistry.RegisterForNavigation<OrderSummaryPage, OrderSummaryPageViewModel>();
         }
     }
 }

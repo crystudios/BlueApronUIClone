@@ -3,5 +3,28 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              Title="{Binding Title}"
              x:Class="BlueApronUIClone.Views.RecipeListPage">
-
+    
+    <NavigationPage.TitleView >
+        <Label Text="{Binding Title}" Style="{DynamicResource Key=TitleViewHeader }"/>
+    </NavigationPage.TitleView>
+    
+    <ListView   x:Name="lstRecipes" ItemsSource="{Binding RecipeList}" 
+                BackgroundColor="{DynamicResource Key=colorBackground}"
+                HasUnevenRows="true" >
+         <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>   
+                   <StackLayout Orientation="Horizontal" Padding="10,10,10,10">  
+                        <Image   x:Name="imgRecipe"  Source="{Binding Picture}" WidthRequest="100" HeightRequest="100" />
+                        <StackLayout Orientation="Vertical"> 
+                              <Label  x:Name="lblRecipeName" Text="{Binding RecipeName}" Font="Bold,13" TextColor="{StaticResource Key=colorPrimary}"  Margin="10,0,0,0"
+                                      HorizontalTextAlignment="Start"/>
+                              <Label  x:Name="lblRecipeDesc" Text="{Binding RecipeDesc}" FontSize="11" TextColor="{StaticResource Key=colorSecondaryText}" Margin="10,0,0,0"
+                                      HorizontalTextAlignment="Start"/>
+                        </StackLayout> 
+                   </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
 </ContentPage>

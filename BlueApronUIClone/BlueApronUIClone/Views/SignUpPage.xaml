@@ -2,6 +2,52 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              Title="{Binding Title}"
-             x:Class="BlueApronUIClone.Views.SignUpPage">
-
+             x:Class="BlueApronUIClone.Views.SignUpPage"
+             BackgroundColor="#99eceef2">
+    <ScrollView >
+        <StackLayout>
+            <StackLayout.Padding>
+                <OnPlatform x:TypeArguments="Thickness">
+                    <On Platform="iOS" Value="20,60,20,40" />
+                    <On Platform="Android" Value="20,40,20,20" />
+                </OnPlatform>
+            </StackLayout.Padding>    
+            <!-- Place new controls here -->
+            <Image Source="unnamed" HorizontalOptions="Center"/>
+            <Frame HasShadow="false" BackgroundColor="White" Padding="10" CornerRadius="5" >
+                <StackLayout Spacing="1">
+                    <Entry HorizontalOptions="FillAndExpand" Placeholder="Email" HeightRequest="50"/>
+                    <Entry HorizontalOptions="FillAndExpand" Placeholder="Password" BackgroundColor="White" 
+                           HeightRequest="50"/>
+                    <Entry HorizontalOptions="FillAndExpand" Placeholder="ZIP Code" BackgroundColor="White" 
+                           HeightRequest="50"/>
+                </StackLayout>
+            </Frame>
+            <Button HorizontalOptions="FillAndExpand" Text="Sign Up" BackgroundColor="#0f346c" 
+                    TextColor="White" BorderRadius="5" FontAttributes="Bold"/>
+            <Label HorizontalOptions="CenterAndExpand" Text="or" FontSize="12" Margin="0,10,0,0"
+                   />
+            <Button HorizontalOptions="Center"  
+                    TextColor="#3b5998" Text="  Sign Up with Facebook" FontAttributes="Bold" 
+                    Image="ic_f_icon" BackgroundColor="Transparent"/>
+            
+            <Label HorizontalOptions="Center" VerticalOptions="StartAndExpand" HorizontalTextAlignment="Center" Margin="40,0,40,0">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span   Text="By signing up you agree to Blue Apron's "  
+                              FontSize="12" />
+                        <Span FontSize="12" Text="Terms of Service" TextColor="{StaticResource Key=colorPrimary}"/>
+                        <Span FontSize="12" Text=" and "/>
+                        <Span FontSize="12" Text="Privacy Policy" TextColor="{StaticResource Key=colorPrimary}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand"> 
+                
+                <Label Text="Already have an account? " VerticalOptions="Center" HorizontalOptions="EndAndExpand"/>
+                <Button Text="Log In" VerticalOptions="Center" HorizontalOptions="StartAndExpand"
+                        BackgroundColor="Transparent" TextColor="#3b5998" FontAttributes="Bold"/>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

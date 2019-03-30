@@ -185,6 +185,10 @@
     <BundleResource Include="Resources\Fonts\CeraPro-Medium.otf" />
     <BundleResource Include="Resources\Fonts\CeraPro-Regular.otf" />
     <BundleResource Include="Resources\Fonts\Roboto-Regular.ttf" />
+    <BundleResource Include="Resources\familyplan%403x.png" />
+    <BundleResource Include="Resources\twoperson_big%403x.png" />
+    <BundleResource Include="Resources\family_big%403x.png" />
+    <BundleResource Include="Resources\sweetchilli.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

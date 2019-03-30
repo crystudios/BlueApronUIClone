@@ -3,5 +3,7 @@
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
             x:Class="BlueApronUIClone.Views.MainPage" 
             Title="{Binding Title}">
-    
+    <NavigationPage.TitleView >
+        <Label Text="{Binding Title}" Style="{DynamicResource Key=titleViewHeader }"/>
+    </NavigationPage.TitleView>
 </TabbedPage>

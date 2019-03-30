@@ -10,6 +10,7 @@ namespace BlueApronUIClone.ViewModels
 {
     public class MainPageViewModel : ViewModelBase
     {
+        //public object MyProperty { get; set; }
         public MainPageViewModel(INavigationService navigationService)
             : base(navigationService)
         {

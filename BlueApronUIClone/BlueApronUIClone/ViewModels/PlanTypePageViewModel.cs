@@ -13,6 +13,7 @@ namespace BlueApronUIClone.ViewModels
     {
         public PlanTypePageViewModel(INavigationService navigationService) : base(navigationService)
         {
+            Title = "Let's Personalize your plan." + Environment.NewLine + "Which one fits your lifestyle?";
         }
     }
 }

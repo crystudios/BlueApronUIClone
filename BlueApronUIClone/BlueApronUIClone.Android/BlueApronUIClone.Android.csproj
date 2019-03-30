@@ -83,6 +83,10 @@
     <AndroidResource Include="Resources\drawable\img4.png" />
     <AndroidResource Include="Resources\drawable\img5.png" />
     <AndroidResource Include="Resources\drawable\img6.png" />
+    <AndroidResource Include="Resources\drawable\familyplan.png" />
+    <AndroidResource Include="Resources\drawable\twoperson_big.png" />
+    <AndroidResource Include="Resources\drawable\family_big.png" />
+    <AndroidResource Include="Resources\drawable\sweetchilli.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />

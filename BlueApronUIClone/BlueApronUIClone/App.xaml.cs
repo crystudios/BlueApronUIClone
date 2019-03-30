@@ -23,7 +23,7 @@ namespace BlueApronUIClone
         {
             InitializeComponent();
 
-            await NavigationService.NavigateAsync("NavigationPage/RecipeListPage");
+            await NavigationService.NavigateAsync("NavigationPage/OnTheMenuPage");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)

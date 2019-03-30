@@ -2,6 +2,52 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              Title="{Binding Title}"
-             x:Class="BlueApronUIClone.Views.PlanTypePage">
-
+             x:Class="BlueApronUIClone.Views.PlanTypePage"
+             BackgroundColor="{DynamicResource Key=colorBackground}">
+    
+    <NavigationPage.TitleView >
+        <Label Text="{Binding Title}" Style="{DynamicResource Key=titleViewHeader }"/>
+    </NavigationPage.TitleView>
+    
+    <StackLayout Margin="20">
+        <Frame Padding="0" CornerRadius="5" Margin="0,0,0,20" HasShadow="false">
+            <StackLayout Spacing="0">
+                <Image Source="twoperson_big"/>
+                
+                <Label Text="Two-Person" Style="{DynamicResource Key=primaryLabel}"
+                         HorizontalTextAlignment="Center" FontSize="18" Margin="0,15,0,0"/>
+            
+                <Label  HorizontalTextAlignment="Center" Margin="0,0,0,15">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Serves 2 • as low as " Style="{DynamicResource Key=secondaryLabel}" />
+                            <Span Text=" $9.99 " Style="{DynamicResource Key=secondaryMoneyLabel}"/>
+                            <Span Text="a serving" Style="{DynamicResource Key=secondaryLabel}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+        </Frame>
+        
+        <Frame Padding="0" HasShadow="false" CornerRadius="5" >
+            <StackLayout Spacing="0">
+                <Image Source="family_big" Grid.Row="2" HorizontalOptions="Fill" />
+                <Label Text="Family" HorizontalTextAlignment="Center"
+                   FontSize="18" Style="{DynamicResource Key=primaryLabel}" Margin="0,15,0,0"/>
+                <Label HorizontalTextAlignment="Center" Margin="0,0,0,15">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Serves 4 • as low as " Style="{DynamicResource Key=secondaryLabel}"/>
+                            <Span Text=" $7.49 " Style="{DynamicResource Key=secondaryMoneyLabel}"/>
+                            <Span Text="a serving" Style="{DynamicResource Key=secondaryLabel}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>    
+        </Frame>
+        <Label Text="You can always change this later" VerticalOptions="EndAndExpand" Style="{DynamicResource Key=secondaryLabel}"
+               Grid.Row="7" Grid.Column="0" HorizontalOptions="CenterAndExpand"
+               />
+    </StackLayout>
+    
 </ContentPage>

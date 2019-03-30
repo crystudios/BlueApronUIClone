@@ -3,5 +3,60 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              Title="{Binding Title}"
              x:Class="BlueApronUIClone.Views.OnTheMenuPage">
-
+    <StackLayout>
+        <StackLayout Orientation="Horizontal" Padding="20" HorizontalOptions="Fill">
+            <Button BackgroundColor="Transparent" HorizontalOptions="FillAndExpand"
+                    Text="Week of Jul 1" FontSize="12"/>
+            <Image HorizontalOptions="Center" BackgroundColor="{StaticResource Key=colorSecondaryText}"
+                   HeightRequest="35" WidthRequest="1" VerticalOptions="Center"/>
+            <Button BackgroundColor="Transparent" HorizontalOptions="FillAndExpand"
+                    Text="Week of Jul 8"  FontSize="12"/>
+            <Image HorizontalOptions="Center" BackgroundColor="{StaticResource Key=colorSecondaryText}"
+                   HeightRequest="35" WidthRequest="1" VerticalOptions="Center"/>
+            <Button BackgroundColor="Transparent" HorizontalOptions="FillAndExpand"
+                    Text="Week of Jul 15" FontSize="12" />
+            <Image HorizontalOptions="Center" BackgroundColor="{StaticResource Key=colorSecondaryText}"
+                   HeightRequest="35" WidthRequest="1" VerticalOptions="Center"/>
+            <Button BackgroundColor="Transparent" HorizontalOptions="FillAndExpand"
+                    Text="Week of Jul 22"  FontSize="12"/>
+        </StackLayout>
+        <Label Margin="20,0,0,0">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="WEEK OF " FontSize="12"/>
+                    <Span Text="JUL 1" FontAttributes="Bold" FontSize="12"/>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        
+        <ListView ItemsSource="{Binding RecipeList}"
+                  HasUnevenRows="true">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>   
+                       <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+                            <!--  -->
+                            <Image Source="{Binding Picture}" VerticalOptions="Fill"
+                                   HorizontalOptions="Fill"/>
+                            <StackLayout BackgroundColor="#88000000" HorizontalOptions="Fill"
+                                         VerticalOptions="End" Spacing="0" >
+                                <Label Text="{Binding RecipeName}" 
+                                       Style="{DynamicResource Key=primaryLabel}" TextColor="White"
+                                       FontSize="18" Margin="15,20,0,0"/>
+                                <Label Text="{Binding RecipeDesc}" Margin="15,0,0,20"
+                                       Style="{DynamicResource Key=secondaryLabel}" TextColor="White" />
+                            </StackLayout>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+    </StackLayout>
 </ContentPage>

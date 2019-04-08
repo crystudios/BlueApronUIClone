@@ -3,5 +3,58 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              Title="{Binding Title}"
              x:Class="BlueApronUIClone.Views.LearnMorePage">
-
+    
+    <Grid BackgroundColor="{StaticResource Key=colorSecondaryBackground}"
+          >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        
+        <StackLayout VerticalOptions="Start" Grid.ColumnSpan="2" 
+                     Grid.Row="0" Grid.Column="0" >
+            <Image HorizontalOptions="Center" Source="chevron_right" 
+                   HeightRequest="50" WidthRequest="50"/>
+        </StackLayout>
+        
+        <ScrollView Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+            <StackLayout>
+                <Image Source="start" Aspect="AspectFill" />
+                
+                <StackLayout Padding="20,20,20,0" Spacing="5">
+                    
+                    <Label Text="Dinner, the Blue Apron way" HorizontalTextAlignment="Center" 
+                           Style="{DynamicResource Key=primaryLabelHeader}" />
+                     
+                    <Image Source="learn1" Margin="10"/>
+                    
+                    <Label Text="Our chefs and farmers work together" HorizontalTextAlignment="Center" 
+                           Style="{DynamicResource Key=primaryLabel}" /> 
+                    
+                    <Label Text="to make food more sustainable and recipes more delicious" 
+                           HorizontalTextAlignment="Center" Style="{DynamicResource Key=secondaryLabel}"/>
+                    
+                    <Image Source="learn2" Margin="10"/>
+                    
+                    <Label Text="We send you higher quality food at better prices" HorizontalTextAlignment="Center"
+                           Style="{DynamicResource Key=primaryLabel}" />                     
+                    <Label Text="By cutting out the middle-man and delivering ingredients at their freshest" 
+                           HorizontalTextAlignment="Center" Style="{DynamicResource Key=secondaryLabel}" />
+                    
+                    <Image Source="learn3" Margin="10"/>
+                    
+                    <Label Text="You cook incredible meals from scratch" HorizontalTextAlignment="Center" 
+                           Style="{DynamicResource Key=primaryLabel}"/>
+                    
+                    <Label Text="With perfectly portioned ingredients and step-by-step recipes" 
+                           HorizontalTextAlignment="Center" Style="{DynamicResource Key=secondaryLabel}" 
+                           Margin="0,0,0,60"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+        <Button Text="Log In" Style="{StaticResource Key=primaryButton}" VerticalOptions="End" Margin="5"
+                Grid.Column="0" Command="{Binding LogInCommand}" HeightRequest="50"/>
+        <Button Text="Get Started" Style="{StaticResource Key=accentButton}" VerticalOptions="End" 
+                HeightRequest="50" Margin="5" Grid.Column="1"/>
+    </Grid>
 </ContentPage>

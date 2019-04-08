@@ -150,7 +150,7 @@
             <!-- Row13 -->
             <Button BackgroundColor="#0f346c" Grid.Row="13" Grid.Column="0" Grid.ColumnSpan="2"
                     Text="Continue" TextColor="White" FontAttributes="Bold"
-                    HeightRequest="50"/>
+                    HeightRequest="50" Command="{Binding ContinueButtonCommand}"/>
         </Grid>
     </ContentPage.Content>
 

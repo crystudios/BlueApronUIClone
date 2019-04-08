@@ -8,11 +8,9 @@ using System.Text;
 
 namespace BlueApronUIClone.ViewModels
 {
-    public class MainPageViewModel : ViewModelBase
+    public class MainContainerViewModel : ViewModelBase
     {
-
-
-        public MainPageViewModel(INavigationService navigationService)
+        public MainContainerViewModel(INavigationService navigationService)
             : base(navigationService)
         {
             Title = "Main Page";

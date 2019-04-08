@@ -86,7 +86,26 @@
     <AndroidResource Include="Resources\drawable\familyplan.png" />
     <AndroidResource Include="Resources\drawable\twoperson_big.png" />
     <AndroidResource Include="Resources\drawable\family_big.png" />
-    <AndroidResource Include="Resources\drawable\sweetchilli.jpg" />
+    <AndroidResource Include="Resources\drawable\sweetchilli.png" />
+    <AndroidResource Include="Resources\drawable\chevron_right.xml" />
+    <AndroidResource Include="Resources\drawable\learn1.png" />
+    <AndroidResource Include="Resources\drawable\learn2.png" />
+    <AndroidResource Include="Resources\drawable\learn3.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\chefHat.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\chefHat.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\chefHat.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\chefHat.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\chefHat.png" />
+    <AndroidResource Include="Resources\drawable\ic_nav_current_menu_unselected.xml" />
+    <AndroidResource Include="Resources\drawable\ic_nav_profile_unselected.xml" />
+    <AndroidResource Include="Resources\drawable\ic_nav_recipe_search_unselected.xml" />
+    <AndroidResource Include="Resources\drawable\logo_blue_24.xml" />
+    <AndroidResource Include="Resources\drawable\start.png" />
+    <AndroidResource Include="Resources\drawable\ic_nav_upcoming_unselected.xml" />
+    <AndroidResource Include="Resources\drawable\ic_facebook.xml" />
+    <AndroidResource Include="Resources\drawable\ic_google.xml" />
+    <AndroidResource Include="Resources\drawable\unnamed.png" />
+    <AndroidResource Include="Resources\drawable\ic_f_icon.xml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
@@ -107,6 +126,7 @@
   <ItemGroup>
     <Folder Include="Assets\Fonts\" />
     <Folder Include="Resources\drawable\" />
+    <Folder Include="Resources\drawable-hdpi\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\CeraPro-Bold.otf" />

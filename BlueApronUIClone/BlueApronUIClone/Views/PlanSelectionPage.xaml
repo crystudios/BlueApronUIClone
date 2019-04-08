@@ -126,7 +126,8 @@
             </Grid>
             <!-- Continue Button -->
             <Button BackgroundColor="#0f346c" HeightRequest="50"
-                    Text="Continue" TextColor="White" FontAttributes="Bold" />
+                    Text="Continue" TextColor="White" FontAttributes="Bold" 
+                    Command="{Binding ContinueButtonCommand}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

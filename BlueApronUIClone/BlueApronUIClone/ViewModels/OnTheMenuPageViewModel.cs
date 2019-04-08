@@ -15,9 +15,25 @@ namespace BlueApronUIClone.ViewModels
     {
         public ObservableCollection<Recipe> RecipeList { get; set; }
 
+        public String WeekLabel1 { get; set; }
+        public String WeekLabel2 { get; set; }
+        public String WeekLabel3 { get; set; }
+        public String WeekLabel4 { get; set; }
+        //public object MyProperty { get; set; }
+
         public OnTheMenuPageViewModel(INavigationService navigationService) : base(navigationService)
         {
             Title = "On The Menu";
+
+            WeekLabel1 = "Week of" + Environment.NewLine +
+                         "July 1";
+            WeekLabel2 = "Week of" + Environment.NewLine +
+                         "July 8";
+            WeekLabel3 = "Week of" + Environment.NewLine +
+                         "July 15";
+            WeekLabel4 = "Week of" + Environment.NewLine +
+                         "July 22";
+
             RecipeList = new ObservableCollection<Recipe>();
             PopulateList();
         }
@@ -30,7 +46,7 @@ namespace BlueApronUIClone.ViewModels
                 RecipeId = 1,
                 RecipeName = "Sweet Chilli Beef & Vegetable Stir-Fry",
                 RecipeDesc = "with Garlic Rice",
-                Picture = "sweetchilli.jpg"
+                Picture = "sweetchilli"
             });
 
             RecipeList.Add(new Recipe()

@@ -4,21 +4,73 @@
              Title="{Binding Title}"
              x:Class="BlueApronUIClone.Views.OnTheMenuPage">
     <StackLayout>
+        <StackLayout Orientation="Horizontal" HeightRequest="60">
+            <Image Source="logo_blue_24" HorizontalOptions="CenterAndExpand" 
+                   WidthRequest="35" HeightRequest="35" VerticalOptions="Center"/>
+        </StackLayout>
         <StackLayout Orientation="Horizontal" Padding="20" HorizontalOptions="Fill">
-            <Button BackgroundColor="Transparent" HorizontalOptions="FillAndExpand"
-                    Text="Week of Jul 1" FontSize="12"/>
+            <Label BackgroundColor="Transparent" HorizontalOptions="FillAndExpand"
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                   > 
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span FontSize="12" TextColor="{StaticResource Key=colorPrimary}" >
+                            <Span.Text>
+Week of
+Jul 1
+                            </Span.Text>
+                        </Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
             <Image HorizontalOptions="Center" BackgroundColor="{StaticResource Key=colorSecondaryText}"
                    HeightRequest="35" WidthRequest="1" VerticalOptions="Center"/>
-            <Button BackgroundColor="Transparent" HorizontalOptions="FillAndExpand"
-                    Text="Week of Jul 8"  FontSize="12"/>
+            <Label BackgroundColor="Transparent" HorizontalOptions="FillAndExpand"
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                   > 
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span FontSize="12" >
+                            <Span.Text>
+Week of
+Jul 8
+                            </Span.Text>
+                        </Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
             <Image HorizontalOptions="Center" BackgroundColor="{StaticResource Key=colorSecondaryText}"
                    HeightRequest="35" WidthRequest="1" VerticalOptions="Center"/>
-            <Button BackgroundColor="Transparent" HorizontalOptions="FillAndExpand"
-                    Text="Week of Jul 15" FontSize="12" />
+            <Label BackgroundColor="Transparent" HorizontalOptions="FillAndExpand"
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                   > 
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span FontSize="12" >
+                            <Span.Text>
+Week of
+Jul 15
+                            </Span.Text>
+                        </Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
             <Image HorizontalOptions="Center" BackgroundColor="{StaticResource Key=colorSecondaryText}"
                    HeightRequest="35" WidthRequest="1" VerticalOptions="Center"/>
-            <Button BackgroundColor="Transparent" HorizontalOptions="FillAndExpand"
-                    Text="Week of Jul 22"  FontSize="12"/>
+            <Label BackgroundColor="Transparent" HorizontalOptions="FillAndExpand"
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                   > 
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span FontSize="12" >
+                            <Span.Text>
+Week of
+Jul 22
+                            </Span.Text>
+                        </Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
         </StackLayout>
         <Label Margin="20,0,0,0">
             <Label.FormattedText>
@@ -30,22 +82,21 @@
         </Label>
         
         <ListView ItemsSource="{Binding RecipeList}"
-                  HasUnevenRows="true">
+                  HasUnevenRows="true" >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>   
-                       <Grid>
+                       <Grid Margin="0,0,0,5">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="Auto" />
                             </Grid.RowDefinitions>
                             <!--  -->
-                            <Image Source="{Binding Picture}" VerticalOptions="Fill"
-                                   HorizontalOptions="Fill"/>
+                            <Image Source="{Binding Picture}" Aspect="AspectFill" Grid.Row="0"/>
                             <StackLayout BackgroundColor="#88000000" HorizontalOptions="Fill"
-                                         VerticalOptions="End" Spacing="0" >
+                                         VerticalOptions="End" Spacing="0" Grid.Row="0" >
                                 <Label Text="{Binding RecipeName}" 
                                        Style="{DynamicResource Key=primaryLabel}" TextColor="White"
                                        FontSize="18" Margin="15,20,0,0"/>

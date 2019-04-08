@@ -1,30 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             Title="{Binding Title}"
+             Title="{Binding Title}" BackgroundColor="{DynamicResource Key=colorBackground}"
              x:Class="BlueApronUIClone.Views.RecipeListPage">
-    
-    <NavigationPage.TitleView >
+    <!--<NavigationPage.TitleView >
         <Label Text="{Binding Title}" Style="{DynamicResource Key=titleViewHeader }"/>
-    </NavigationPage.TitleView>
+    </NavigationPage.TitleView>-->
     
-    <ListView   x:Name="lstRecipes" ItemsSource="{Binding RecipeList}" 
-                BackgroundColor="{DynamicResource Key=colorBackground}"
-                HasUnevenRows="true" >
-         <ListView.ItemTemplate>
-            <DataTemplate>
-                <ViewCell>   
-                   <StackLayout Orientation="Horizontal" Padding="10,10,10,10">  
-                        <Image   x:Name="imgRecipe"  Source="{Binding Picture}" WidthRequest="100" HeightRequest="100" />
-                        <StackLayout Orientation="Vertical"> 
-                              <Label  x:Name="lblRecipeName" Text="{Binding RecipeName}" Style="{StaticResource Key=listPrimaryLabel}"  Margin="10,0,0,0"
-                                      HorizontalTextAlignment="Start"/>
-                              <Label  x:Name="lblRecipeDesc" Text="{Binding RecipeDesc}" Style="{StaticResource Key=listSecondaryLabel}" Margin="10,0,0,0"
-                                      HorizontalTextAlignment="Start"/>
-                        </StackLayout> 
-                   </StackLayout>
-                </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+    <StackLayout>
+        <StackLayout Orientation="Horizontal" HeightRequest="60">
+            <Label Text="{Binding Title}" Style="{DynamicResource Key=titleViewHeader }"
+                   HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+        </StackLayout>
+    
+        <ListView   x:Name="lstRecipes" ItemsSource="{Binding RecipeList}" 
+                    HasUnevenRows="true" VerticalOptions="FillAndExpand">
+             <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>   
+                        <StackLayout Orientation="Horizontal" Padding="10,10,10,10">  
+                            <Image   x:Name="imgRecipe"  Source="{Binding Picture}" WidthRequest="100" HeightRequest="100" />
+                            <StackLayout Orientation="Vertical"> 
+                                <Label  x:Name="lblRecipeName" Text="{Binding RecipeName}" Style="{StaticResource Key=listPrimaryLabel}"  Margin="10,0,0,0"
+                                        HorizontalTextAlignment="Start"/>
+                                <Label  x:Name="lblRecipeDesc" Text="{Binding RecipeDesc}" Style="{StaticResource Key=listSecondaryLabel}" Margin="10,0,0,0"
+                                        HorizontalTextAlignment="Start"/>
+                            </StackLayout> 
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
 </ContentPage>

@@ -95,7 +95,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <ITunesArtwork Include="iTunesArtwork@1x.png" />
     <ITunesArtwork Include="iTunesArtwork@2x.png" />
-    <ITunesArtwork Include="iTunesArtwork@3x.png" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\Contents.json">
@@ -181,14 +180,19 @@
     <BundleResource Include="Resources\Default.png" />
     <BundleResource Include="Resources\Default@2x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
-    <BundleResource Include="Resources\Fonts\CeraPro-Bold.otf" />
-    <BundleResource Include="Resources\Fonts\CeraPro-Medium.otf" />
-    <BundleResource Include="Resources\Fonts\CeraPro-Regular.otf" />
-    <BundleResource Include="Resources\Fonts\Roboto-Regular.ttf" />
     <BundleResource Include="Resources\familyplan%403x.png" />
     <BundleResource Include="Resources\twoperson_big%403x.png" />
     <BundleResource Include="Resources\family_big%403x.png" />
-    <BundleResource Include="Resources\sweetchilli.jpg" />
+    <BundleResource Include="Resources\sweetchilli.png" />
+    <BundleResource Include="Resources\learn1.png" />
+    <BundleResource Include="Resources\learn2.png" />
+    <BundleResource Include="Resources\learn3.png" />
+    <BundleResource Include="Resources\CeraPro-Bold.otf" />
+    <BundleResource Include="Resources\CeraPro-Medium.otf" />
+    <BundleResource Include="Resources\CeraPro-Regular.otf" />
+    <BundleResource Include="Resources\Roboto-Regular.ttf" />
+    <BundleResource Include="Resources\start.png" />
+    <BundleResource Include="Resources\unnamed.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -205,9 +209,6 @@
       <Project>{68328C1F-AF1D-458A-BFEB-6FC9F7340DC1}</Project>
       <Name>BlueApronUIClone</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\Fonts\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

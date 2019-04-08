@@ -3,5 +3,62 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              Title="{Binding Title}"
              x:Class="BlueApronUIClone.Views.ProfilePage">
-
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="auto" />
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        
+        <Label Text ="MY FOOD PICS" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+        
+        <StackLayout Grid.ColumnSpan ="2" Orientation="Vertical" Grid.Row="1" Grid.Column="0">
+            <Image HorizontalOptions="Center" Source="sweetchilli" HeightRequest="200" WidthRequest="200"/>
+            <Label HorizontalTextAlignment="Center" Text="Start Snapping"/>
+            <Label HorizontalTextAlignment="Center" Text="Channel your inner food photographer"/>
+        </StackLayout>
+        
+        <Label Text="Saved Recipes" Grid.Row="2" Grid.Column="0" VerticalTextAlignment="Center" VerticalOptions="Center"/>
+        <Image Grid.Row="2" Grid.Column="1" Source="chevron_right" HeightRequest="30" WidthRequest="30"/>
+        
+        <Label Text="Manage Push Notifications" Grid.Row="3" Grid.Column="0" VerticalTextAlignment="Center" VerticalOptions="Center" />
+        <Image Grid.Row="3" Grid.Column="1" Source="chevron_right"  HeightRequest="30" WidthRequest="30"/>
+        
+        
+        <Label Text="BLUE APRON" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" VerticalTextAlignment="Center" VerticalOptions="Center"/>
+        
+        
+        <Label Text="Report Order Isse" Grid.Row="5" Grid.Column="0"  VerticalTextAlignment="Center" VerticalOptions="Center"/>
+        <Image Grid.Row="5" Grid.Column="1" Source="chevron_right" HeightRequest="30" WidthRequest="30"/>
+        
+        <Label Text="Freshness Guarantee" Grid.Row="6" Grid.Column="0"  VerticalTextAlignment="Center" VerticalOptions="Center"/>
+        <Image Grid.Row="6" Grid.Column="1" Source="chevron_right" HeightRequest="30" WidthRequest="30"/>
+        
+        <Label Text="Contact &amp; FAQ" Grid.Row="7" Grid.Column="0"  VerticalTextAlignment="Center" VerticalOptions="Center"/>
+        <Image Grid.Row="7" Grid.Column="1" Source="chevron_right" HeightRequest="30" WidthRequest="30"/>
+        
+        <Label Text="Rate this app" Grid.Row="8" Grid.Column="0"  VerticalTextAlignment="Center" VerticalOptions="Center"/>
+        <Image Grid.Row="8" Grid.Column="1" Source="chevron_right" HeightRequest="30" WidthRequest="30"/>
+        
+        <Label Text="Send App Feedback" Grid.Row="9" Grid.Column="0"  VerticalTextAlignment="Center" VerticalOptions="Center"/>
+        <Image Grid.Row="9" Grid.Column="1" Source="chevron_right" HeightRequest="30" WidthRequest="30"/>
+        
+        <Label Text="Acknowledgements" Grid.Row="10" Grid.Column="0"  VerticalTextAlignment="Center" VerticalOptions="Center"/>
+        <Image Grid.Row="10" Grid.Column="1" Source="chevron_right" HeightRequest="30" WidthRequest="30"/>
+        
+        
+    </Grid>
 </ContentPage>
